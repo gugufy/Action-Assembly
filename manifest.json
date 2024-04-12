@@ -1,0 +1,25 @@
+
+{
+    "name": "Action-Assembly",
+    "description": "record and repeat actions automatically",
+    "version": "1.0.1",
+
+    "manifest_version": 3,
+
+    "icons":
+    {
+        "16": "/images/icon-016.png",
+        "48": "/images/icon-048.png",
+        "128": "/images/icon-128.png"
+    },
+
+    "content_scripts":
+    [{
+        "matches": ["<all_urls>"],
+        "js": ["action.js"],
+        "run_at": "document_end"
+    }],
+
+    "host_permissions": ["<all_urls>"],
+    "permissions": ["activeTab"]
+}
